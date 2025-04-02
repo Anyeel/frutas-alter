@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir fruta</title>
+</head>
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+<body>
+    <form id="formulario-frutas" hx-post="/frutas" hx-target="#lista-frutas" hx-trigger="submit">
+        <label for="fruta">Fruta: </label>
+        <input type="text" id="fruta" name="fruta" required>
+        <button type="submit">Enviar</button>
+    </form>
+    <ul id="lista-frutas"></ul>
+    <ul id="test" hx-get="/frutas" hx-target="#test" hx-trigger="load"></ul>
+</body>
+</html>
