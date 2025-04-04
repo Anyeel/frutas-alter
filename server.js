@@ -23,7 +23,7 @@ app.get("/frutas", (req, res) => {
         const query = db.prepare("SELECT * FROM fruits");
         const frutas = query.all();
         frutas.forEach((frutas) => {
-            html += `<li>${frutas.name}</li>`;
+            html += `<li>${frutas.fruit_name}</li>`;
         })
         html += "</ul>";
         res.send(html);
